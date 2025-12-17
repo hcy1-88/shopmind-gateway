@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: shopmind-gateway
+  cloud:
+    loadbalancer:
+      nacos:
+        enabled: true
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      config:
+        namespace: shopmind-dev
+        file-extension: yaml
+        group: DEFAULT_GROUP
+      discovery:
+        namespace: shopmind-dev
+        enabled: true
+  config:
+    import: "nacos:${spring.application.name}.yaml"
+
+server:
+  port: 8080
