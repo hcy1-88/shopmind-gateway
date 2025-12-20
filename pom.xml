@@ -45,4 +45,21 @@
             <artifactId>spring-cloud-loadbalancer</artifactId>
         </dependency>
     </dependencies>
+
+    <!-- 打包构建，repackage 不仅会找到主启动类，而且打包时会把第三方依赖也打进去 -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
