@@ -1,5 +1,4 @@
-#FROM 17.0.17_10-jdk-ubi9-minimal
-FROM phenompeople/openjdk17:latest
+FROM crpi-2ya7uhq4uacai3if.cn-hangzhou.personal.cr.aliyuncs.com/shopmind-dev/jdk-17:latest
 LABEL authors="hcy18"
 
 # 设置工作目录
