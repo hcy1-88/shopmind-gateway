@@ -25,7 +25,7 @@ jobs:
         docker build \
           --build-arg MAVEN_REPO_USERNAME=${{ secrets.MAVEN_USER }} \
           --build-arg MAVEN_REPO_PASSWORD=${{ secrets.MAVEN_PASS }} \
-          -t crpi-2ya7uhq4uacai3if.cn-hangzhou.personal.cr.aliyuncs.com/shopmind-gateway:${{ github.sha }} .
+          -t crpi-2ya7uhq4uacai3if.cn-hangzhou.personal.cr.aliyuncs.com/shopmind-dev/shopmind-gateway:${{ github.sha }} .
 
     - name: Push the Docker image
       run: docker push crpi-2ya7uhq4uacai3if.cn-hangzhou.personal.cr.aliyuncs.com/shopmind-dev/shopmind-gateway:${{ github.sha }}
